@@ -36,8 +36,8 @@ console.group("Triangulo")
 //const perimetro_triangulo = ladoTriangulo1 + ladoTriangulo2 + ladoTriangulo3
 
 //Código del Triángulo
-function perimetroTriangulo(lado) {
-  return lado + lado + lado;
+function perimetroTriangulo(lado1, lado2, base) {
+  return lado1 + lado2 + base;
 }
 perimetroTriangulo()
 
@@ -78,24 +78,18 @@ const pi = Math.PI;
 //}
 //diametroCircunferencia()
 
-function diametroCircunferencia (diametro) {
-  return diametro * pi;
+function diametroCircunferencia (radio) {
+  return radio * 2;
   //console.log("El diametro de la Circunferencia es " + diametro_Circunferencia + " centimetros");
 }
 diametroCircunferencia()
 
+function perimetroCircunferencia (radio) {
+  const diametro = diametroCircunferencia(radio);
+  return diametro * pi;
+}
+perimetroCircunferencia()
 
-//function radioCircunferencia (){
-  //console.log("El radio de la Circunferencia es " + radio_Circunferencia + " centimetros");
-//}
-
-//radioCircunferencia()
-
-//function areaCircunferencia () {
-  //console.log("El área de la Circunferencia es " + area_Circunferencia + " centrimetros");
-//}
-
-//areaCircunferencia()
 
 function areaCircunferencia(radio) {
   return radio * radio * pi;
@@ -103,4 +97,4 @@ function areaCircunferencia(radio) {
 
 areaCircunferencia()
 
-//console.groupEnd();
+console.groupEnd()
